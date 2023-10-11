@@ -1,0 +1,78 @@
+// @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark:#808080;
+  --light-dark:#8a817c;
+  --light: #f4f3ee;
+  --accent: #e0afa0;
+  --accent2: rgb(113, 131, 156);
+  --danger: #ff3031;
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--light-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  border-radius: 50px;
+}
+
+html {
+  height: 100%;
+  overflow-y: overlay;
+} */
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  font-family: 'Inter', sans-serif;
+
+  background-color: var(--light);
+  /* background: linear-gradient(135deg, var( --dark) 20%,var(--light-dark)); */
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style:none;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+// img {
+//   user-select: none;
+//   pointer-events: none;
+// } 
