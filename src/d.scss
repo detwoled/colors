@@ -1,21 +1,29 @@
+$border: 8px;
+
 .wrapper {
+    aspect-ratio: 1/1;
+    height: 275px;
     display: flex;
     justify-content: center;
     align-items: center;
-    // gap: 1rem;
+    padding: 10px;
+    border: 1px solid var(--shadow-color);
+    border-radius: $border;
+    background-color: var(--dark);
+    box-shadow: 0 2rem 3rem 1rem var(--shadow-color);
 }
 
 .cells-box {
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
-    border-radius: 8px;
-    background-color: var(--dark);
-    gap: 1px;
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap: 2px;
 }
 
 .cell {
-    aspect-ratio: 1/1;
-    height: 50px;
-    border-radius: 8px;
+    // aspect-ratio: 1/1;
+    // grid-area: 3/1;
+    // height: 50px;
+    border-radius: $border;
 }
