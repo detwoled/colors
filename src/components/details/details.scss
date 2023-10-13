@@ -1,0 +1,21 @@
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.details h1 {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.details p {
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 0 3rem .5rem var(--shadow-color);
+    border-radius: var(--border);
+    color: var(--dark);
+}

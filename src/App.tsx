@@ -1,30 +1,51 @@
-import { FC, useEffect, useState } from "react";
+import { 
+  useState,
+  useEffect,
+  FC,
+} from "react";
 
-import { generateCells } from "utils/helpers.util";
+import Details from "components/details/details.component";
+import Game from "components/game/game.component";
+import Menu from "components/menu/menu.component";
 
-import './d.scss'
+import { IStats } from 'interfaces/stats.interface'
 
 const App: FC =() => {
-  const [cells, setCells] = useState<string[]>([])
-
+  const [isGame, setIsGame] = useState<boolean>(false)
+  const [stats, setStats] = useState<IStats| null>(null)
 
   useEffect(() => {
-    // generateCells(81)
-    setCells(generateCells(16))
-  }, [])
+    if (!isGame) {
+        const score = localStorage.getItem('score')
+        const errors = localStorage.getItem('errors')
+
+        if(score && errors) {
+          return setStats({
+            score,
+            errors,
+          })
+        }
+    }
+
+    setStats(null)
+  }, [isGame])
+
   return (
     <div className="container">
       <div className="wrapper">
-        <li className="cells-box">
-          {
-            cells.map((color, key) => (
-              <ul className="cell" 
-                key={key}
-                style={{backgroundColor: `rgb(${color})`}}
-              />
-            ))
-          }
-        </li>
+        <Details/>
+        {
+          (isGame && (
+            <Game
+              setIsGame={setIsGame}
+            />
+          )) || (
+            <Menu
+              stats={stats}
+              setIsGame={setIsGame}
+            />
+          )
+        }
       </div>
     </div>
   );
