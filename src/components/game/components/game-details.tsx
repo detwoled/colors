@@ -24,12 +24,12 @@ const GameDetails: FC<IGameDetailsProps> = ({
 
     return (
         <div className='game-details_box'>
-            <div>
+            <p>
                 {time}cек
-            </div>
-            <div>
+            </p>
+            <p>
                 попыток: {attempts}
-            </div>
+            </p>
         </div>
     )
 }
