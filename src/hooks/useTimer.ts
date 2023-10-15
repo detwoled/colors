@@ -22,7 +22,6 @@ const useTimer = (seconds: number = 60, onFinish: () => void): ITimer => {
 
     useEffect(() => {        
         if (time<=0) {
-            console.log('pizda')
             onFinish()
             clearInterval(timer)
         }
