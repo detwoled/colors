@@ -22,7 +22,7 @@ const Menu: FC<IMenuProps> = ({
             {
                 stats && (
                     <div className='menu-stats_box'>
-                        <h1>прошлый результат:</h1>
+                        <h1>результат:</h1>
                         <div className='menu-stats'>
                             <p>очки: <em>{stats?.score}</em></p>
                             <p>ошибки: <em>{stats?.errors}</em></p>
