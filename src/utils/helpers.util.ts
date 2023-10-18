@@ -26,9 +26,6 @@ export const generateCells = (count: number): IGenerateCells => {
 
   const cells = Array.from({length: count}, () => color)
   cells[getRandNum(count)] = similar
-
-  console.log(colorArr, similarArr)
-  console.log(cells)
   
   return {cells, similar}
   
