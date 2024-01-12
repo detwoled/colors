@@ -14,7 +14,7 @@ export const getRandffset = (num: number, diff: number = 15, min: number = 0, ma
 }
 
 export const generateCells = (count: number): IGenerateCells => {
-  const diff = 15
+  const diff = 20
   const min= 100
   const max = 200
 
